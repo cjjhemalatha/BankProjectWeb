@@ -1,0 +1,113 @@
+body{
+    background: rgb(2,0,36); 
+  background-image: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(9,121,118,0.9784956218815651) 35%, rgba(0,212,255,1) 81%);
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; 
+}
+.card{
+  background:rgb(2, 20, 19);
+  
+}
+.formPopUp{
+  display: none;
+position: fixed;
+bottom: 0;
+right: 15px;
+border: 3px solid #f3e9e9;
+z-index: 9;
+}
+
+#form-container{
+  max-width: 300px;
+padding: 10px;
+background-color: rgb(212, 223, 226);
+}
+
+input:focus {
+background-color: rgb(243, 248, 252);
+outline: none;
+}
+
+button:hover {
+opacity:1;
+}
+
+.h2{
+	color:white;
+}
+
+/* Extra styles for the cancel button */
+/* .cancelbtn {
+padding: 14px 20px;
+background-color: #f44336;
+} */
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+float: left;
+width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 16px;
+}
+
+/* The Modal (background) */
+.custSignUp {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: #474e5d;
+padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+right: 35px;
+top: 15px;
+font-size: 40px;
+font-weight: bold;
+color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+color: #f44336;
+cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn {
+   width: 100%;
+}
+}

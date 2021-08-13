@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="maincss.css">
+  </head>
+  <body> 
+    
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid" >
+          <span class="navbar-brand mb-0 h1">People's Bank</span>
+        </div>
+    </nav>
+    </br>
+    </br>
+    <div id="mainDiv">
+
+
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col">
+           <div class="p-3 border bg-light">
+                <!-- employee card -->
+                <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem; margin: auto;">
+                  <img src="Images\gabrielle-henderson-HJckKnwCXxQ-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Employee</h5>
+                    <p class="card-text">Welcome back!!! </p>
+                    <button type="button" class="btn btn-info" onclick="empLogin()">Login</button>
+                  </div>
+                 </div>
+             </div>
+          </div>
+         
+         <!--end of employee card-->
+
+         <!--Customer Part-->
+      
+       <div class="col">
+        <div class="p-3 border bg-light">
+          
+          <div class="card shadow-lg p-3 mb-5 bg-body rounded" id="custCard" style="width: 18rem; margin: auto; ">
+            <img src="Images\andre-taissin-5OUMf1Mr5pU-unsplash.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Customer</h5>
+              <p class="card-text">Welcome To Our Bank!!! </p>
+              <button type="button" class="btn btn-info" onclick="document.getElementById('id01').style.display='block'">SignUp</button>
+              <button type="button" class="btn btn-info" onclick="custLogin()">Login</button>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!--end of cust card-->
+
+         <!--to get emp login form-->>
+         <script>
+          function empLogin() {
+           document.getElementById("empForm").style.display="block";
+         }  
+         
+         function closeForm() {
+          document.getElementById("empForm").style.display = "none";
+         }
+       </script>  
+        
+       
+       
+       
+        <!-- employee login -->
+    <div class="formPopUp" id="empForm">
+      <form id="form-container" method="post" action="EmployeeLogin">
+        <div class="row mb-3">
+          <label for="empName" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputName" name="empName">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <label for="empID" class="col-sm-2 col-form-label">Employee Id</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputID" name="empID">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" name="empPassword" >
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <label for="inputPhone" class="col-sm-2 col-form-label">Phone Number</label>
+          <div class="col-sm-10">
+            <input type="tel" class="form-control" id="inputPhone">
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" >Sign in</button>
+        <button type="button" class="btn btn-primary" onclick="closeForm()">Close</button>
+      </form>
+      </div>
+  
+  
+      
+      
+      <!--To redirect to empDashBoard-->
+      
+  
+      <!--End of employee part in this page-->
+  
+  
+  
+      <!--customer form display-->
+
+      <script>
+        function custLogin() {
+         document.getElementById("custForm").style.display="block";
+       }  
+       </script>
+         
+    
+    
+
+  <!-- custLogin form-->
+       
+    <div class="formPopUp" id="custForm">
+      <form id="form-container" action="CustLogin" method="post">
+        <div class="row mb-3">
+          <label for="custName" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="custName" name="name">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <label for="custId" class="col-sm-2 col-form-label">Customer Id</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="custId" name="id">
+          </div>
+        </div>
+  
+        
+        <div class="row mb-3">
+          <label for="custPassword" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="custPassword" name="password">
+          </div>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary" >Sign in</button>
+        <button type="button" class="btn btn-primary" onclick="closeForm()">Close</button>
+      </form>
+      </div>
+    </div>
+
+
+
+
+  <!-- custSignup -->
+
+  <div id="id01" class="custSignUp">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class=" modal-content" action="webapi/customer/newcustomer" method="post" target="_parent">
+      <div class="container row g-3">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <div class="col-md-6">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter your name" name="name" required>
+         </div>
+         
+         <div class="col-md-6">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        </div>
+
+        <div class="col-md-6">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+          <p style="font-size: small;">len>=8 and must contain uppercase, lowercase and number</p>
+      </div>
+
+
+
+       
+        
+        <div class="col-md-6">
+        <label for="phn-no"><b>Contact Number</b></label>
+        <input type="tel" placeholder="XXXXXXXXXX" name="phn-no" pattern="[6-9]{1}[0-9]{9}" required>
+        </div>
+
+        <div class="col-md-6">
+        <label for="pancard"><b>Pan Card</b></label>
+        <input type="text" placeholder="Enter your pancard" name="pancard" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+        </div>
+
+        
+        <label for="address"><b>Address</b></label>
+        <textarea placeholder="Your address" name="address" rows="5" cols="50" required></textarea>
+        
+        
+        <div class="col-md-6">
+        <label for="Gender"><b>Gender</b></label>
+          <div id="Gender" >
+          <input class="form-check-input" type="radio" name="Gender" value="male" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Male
+          </label>
+        
+        
+          <input class="form-check-input" type="radio" name="Gender" value="female" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Female
+          </label>
+
+          <input class="form-check-input" type="radio" name="Gender" value="other" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Others
+          </label>
+          </div>
+          </div>
+
+          <div class="col-md-6">
+          <label for="initialBalance"><b>InitialBalance</b></label>
+          <input type="number" placeholder="Must be atleast Rs.5000" name="initialBalance" min="5000" required>
+          </div>
+
+          <div class="col-md-6">
+          <label for="dob"><b>Date of Birth</b></label>
+          <input type="date" placeholder="DOB" name="dob" id="dob" required>
+          </div>
+          
+          <div class="col-md-6">
+          <label for="age"><b>Age</b></label>
+          <input type="number" placeholder="age" name="age" id="age" required>
+          </div>
+  
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+  
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-secondary">Cancel</button>
+          <button type="submit" class="signupbtn btn btn-secondary">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div> 
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+  
+  
+
+    
+    
+    
+      
+          
+  </body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"> </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+
+
+   
+  
+</html>

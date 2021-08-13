@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Employee DashBoard</title>
+
+    <style>
+    
+
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+      }
+
+      </style>
+  </head>
+  <body style="background: rgb(34,193,195);
+  background: linear-gradient(25deg, rgba(34,193,195,1) 0%, rgba(228,253,45,1) 100%);background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; ">
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg b" style="color: aliceblue;">
+        
+  
+
+
+<a class="navbar-brand" href="">People's Bank</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#Home">Home <span class="sr-only"></span></a>
+</li>
+
+
+
+
+
+
+
+</ul>
+<form class="row gy-2 gx-3 align-items-center" method="GET" action="EmployeeCustomerDetails">
+  <div class="col-auto">
+    <button type="submit" class="btn btn-secondary">Get all customer details</button>
+    </div>
+</form>
+
+<pre>     </pre>
+<form class="row gy-2 gx-3 align-items-center" method="POST" action="EmployeeCustomerDetails">
+<div class="col-auto">
+<label class="visually-hidden" for="autoSizingInput">Customer Name</label>
+<input type="text" class="form-control custName" id="autoSizingInput" name="cust_name" placeholder="Customer Name">
+</div>
+<div class="col-auto">
+<label class="visually-hidden" for="autoSizingInputGroup">Customer Id</label>
+<div class="input-group">
+  <div class="input-group-text">@</div>
+  <input type="text" class="form-control customerId" id="autoSizingInputGroup" name= "cust_id" placeholder="Customer Id">
+</div>
+</div>
+<div class="col-auto">
+<button type="submit" class="btn btn-secondary">Submit</button>
+</div>
+</form>
+
+     	<form action="Logout" method="post">
+     	<button type="submit">Log Out</button>
+     	</form>
+     
+</div>
+
+
+
+
+</nav>
+  
+  
+
+  <!-- <div id="individual" class="btn btn-success">
+    <form action="" method="post">
+      <p>Enter id of customer</p>
+      <input type="text" name="id" id="id">
+      <p>Enter name of customer</p>
+      <input type="text" name="name" id="name">
+      <button type="submit">Get detail</button>
+    </form>
+  </div> -->
+  
+   <br>
+  <div class="text-center" id="Home">
+    <img src="Images\amy-hirschi-szrJ3wjzOMg-unsplash (1).jpg" class="rounded" alt="..." style="opacity: 0.5;">
+    <div class="center"><h3 style="color: rgb(31, 72, 110); font-family: 'Trebuchet MS', sans-serif; font-style: italic;" >
+      Alone we can do so little. Together we can do so much.
+       <small class="text-muted">Welcome Back!!!</small>
+     </h3></div>
+  </div>
+   
+      
+  
+      <br><br>
+      
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgb(126, 190, 169);">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Enter Customer details to get information</p>
+              <form action="" method="POST">
+                <p>Customer Name</p>
+                <input type="text" name="custName" id="custName">
+                <p>Customer ID</p>
+                <input type="number">
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Get Details</button>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

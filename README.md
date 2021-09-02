@@ -4,3 +4,10 @@
  Customer can view their balance, and make withdrawals, deposits and transfer amount. 
  An employee can view details of all customers.
  All validations are done on frontend. 
+ 
+ Technologies used:
+ Java
+ HTML
+ CSS
+ JavaScript
+ MySql
